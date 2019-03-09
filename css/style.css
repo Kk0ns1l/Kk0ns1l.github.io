@@ -1,0 +1,47 @@
+body {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    height: 270px;
+}
+
+figure:hover img {
+    filter: blur(2px);
+}
+
+figure {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    margin: 0;
+}
+
+figcaption {
+    position: absolute;
+    bottom: -50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+figure:hover > figcaption {
+    bottom: 50%;
+    margin-bottom: -25px;
+    color: #fff;
+    transition: 0.3s;
+}
