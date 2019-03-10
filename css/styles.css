@@ -1,0 +1,59 @@
+body {
+  background-color: #f1c40f;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+}
+h1 {
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.portfolio a {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(30, 28, 28, 0.75);
+  padding: 5px;
+}
+img {
+  height: 270px;
+}
+figure {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  transition: 0.3s;
+  margin: 0;
+  width: 370px;
+}
+figure:hover img {
+  filter: blur(3px);
+}
+figure figcaption {
+  position: absolute;
+  bottom: -50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+}
+figure:hover figcaption {
+  bottom: 50%;
+  margin-bottom: -25px;
+  color: #fff;
+  transition: 0.3s;
+}
