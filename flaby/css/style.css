@@ -1529,10 +1529,12 @@ html, body {
 
     .header-top img {
         width: 100px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 
     .header-content .conteiner-small {
-        padding-top: 60px;
+        padding-top: 30px;
     }
     
     h1 {
