@@ -1,3 +1,117 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+a,
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+h2 {
+  font-family: 'Nunito', sans-serif;
+}
 body {
-  background-color: red;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+}
+.header-fixed {
+  background: linear-gradient(to top, rgba(7, 29, 104, 0.1) 0%, rgba(11, 75, 236, 0.1) 100%);
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+.header-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+.header-top .header-nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 44px;
+}
+.header-top .header-nav a:hover {
+  text-decoration: underline;
+}
+.header-top .header-nav a:last-child {
+  margin-right: 0;
+  text-transform: initial;
+  background-color: #fff;
+  border-radius: 12px;
+  color: #0b4bec;
+  padding: 10px 12px;
+}
+.header-top .header-nav a:last-child:hover {
+  color: #fff;
+  background-color: #0b4bec;
+  text-decoration: none;
+}
+.header-bottom {
+  background: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+  display: flex;
+  justify-content: center;
+  padding: 300px 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
+.header-bottom h1 {
+  font-size: 40px;
+  color: #fff;
+}
+.header-bottom h2 {
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  max-width: 970px;
+  margin: 0 auto 74px;
+}
+.header-bottom .header-button {
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  color: #0b4bec;
+  display: block;
+  padding: 18px 0;
+  max-width: 180px;
+  margin: 0 auto 110px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header-bottom .header-button:hover {
+  background-color: #0b4bec;
+  color: #fff;
+}
+.header-bottom .header-icons {
+  position: absolute;
+  top: 400px;
+  left: 80px;
+}
+.header-bottom .header-rectangles {
+  background-image: linear-gradient(-18deg, rgba(7, 29, 104, 0.25) 0%, rgba(11, 75, 236, 0.25) 100%);
+  border-radius: 60px;
+  transform: rotate(37deg);
+  position: absolute;
+  top: 400px;
+  right: -500px;
+  height: 350px;
+  width: 630px;
+}
+.header-bottom .header-rectangles::before {
+  content: '';
+  background-image: linear-gradient(-18deg, rgba(7, 29, 104, 0.2) 0%, rgba(11, 75, 236, 0.2) 100%);
+  border-radius: 60px;
+  position: absolute;
+  top: 80px;
+  left: 105px;
+  height: 350px;
+  width: 630px;
 }
