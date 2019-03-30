@@ -255,17 +255,21 @@ body {
   justify-content: space-between;
   position: relative;
 }
-.cards-types .slider-cards-type .slider-type-controle a {
+.cards-types .slider-cards-type .slider-type-controle {
   position: absolute;
   top: 50%;
-  margin-top: -10xp;
+  margin-top: -10px;
+  width: 100%;
+}
+.cards-types .slider-cards-type .slider-type-controle a {
+  position: absolute;
 }
 .cards-types .slider-cards-type .slider-type-controle a:first-child {
   left: -82px;
 }
 .cards-types .slider-cards-type .slider-type-controle a:last-child {
-  transform: rotate(180deg);
   right: -82px;
+  transform: rotate(180deg);
 }
 .cards-types .slider-cards-type .card {
   align-items: center;

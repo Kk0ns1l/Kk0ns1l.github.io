@@ -289,21 +289,22 @@ body {
     }
     margin-bottom: 250px;
     .slider-cards-type {
-        position: relative;
         .flex();
         justify-content: space-between;
         position: relative;
         .slider-type-controle {
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            width: 100%;
             a {
                 position: absolute;
-                top: 50%;
-                margin-top: -10xp;
                 &:first-child {
                     left: -82px;
                 }
                 &:last-child {
-                    transform: rotate(180deg);
                     right: -82px;
+                    transform: rotate(180deg);
                 }
             }
         }
