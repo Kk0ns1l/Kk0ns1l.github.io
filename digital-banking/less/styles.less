@@ -74,6 +74,12 @@ body {
     width: 100%;
 }
 
+.container-small {
+    max-width: 500px;
+    margin: @margin-center;
+    width: 100%;
+}
+
 .header-fixed {
     // background: linear-gradient(to top, rgba(7, 29, 104, 0.1) 0%, rgba(11, 75, 236, 0.1) 100%);
     background: @linear-gradient;
@@ -227,10 +233,9 @@ body {
     .container-video {
         background-image: url(../img/video_layout.png);
         background-position: left top;
-        background-size: cover;
+        background-size: 50% 100%;
         background-repeat: no-repeat;
         height: 1160px;
-        width: 50%;
     }
 }
 .services {

@@ -48,6 +48,11 @@ body {
   margin: 0 auto;
   width: 100%;
 }
+.container-small {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
 .header-fixed {
   background: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
   position: fixed;
@@ -193,10 +198,9 @@ body {
 .video .container-video {
   background-image: url(../img/video_layout.png);
   background-position: left top;
-  background-size: cover;
+  background-size: 50% 100%;
   background-repeat: no-repeat;
   height: 1160px;
-  width: 50%;
 }
 .services h4 {
   margin-top: 240px;
