@@ -23,6 +23,7 @@
     <link rel="stylesheet/less" type="text/css" href="less/styles.less"/> 
     <link rel="stylesheet" href="css/styles.css">
 
+    <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <header>
@@ -57,6 +58,13 @@
                 <img src="img/header/header_cards.png" alt="Cards">
                 <div class="header-rectangles">
                 </div>
+            </div>
+        </div>
+        <div class="btn">
+            <div id="btnTop">
+                <a href="#">
+                    <i class="fa fa-angle-up" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </header>
@@ -218,67 +226,84 @@
             <div class="wrap">
                 <div class="questions-wrap">
                     <div class="question">
-                        <a href="#" class="active">
+                        <a class="active">
                             Banking servie
                         </a>
                     </div>
                     <div class="question">
-                        <a href="#">
+                        <a>
                             Security
                         </a>
                     </div>
                     <div class="question">
-                        <a href="#">
+                        <a>
                             Money Deposit                          
                         </a>
                     </div>
                     <div class="question">
-                        <a href="#">
+                        <a>
                             Custome Payment
                         </a>
                         
                     </div>
                     <div class="question">
-                        <a href="#">
+                        <a>
                             Bus/Air Tickets 
                         </a>
                     </div>
                     <div class="question">
-                        <a href="#">
+                        <a>
                             Online Banking 
                         </a>
                     </div>
                 </div>
                 <div class="answers-wrap">
                     <div class="answer">
-                        <a href="#">
+                        <a>
                             Why use a credit card ?
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                     </div>
+                    <div class="answer-content">
+                        <p>
+                            I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know painful. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quia veniam delectus quas sunt? Magnam iure libero eveniet fuga dolor, perferendis tempora? Exercitationem quisquam inventore alias enim quos, veritatis necessitatibus?
+                        </p>
+                    </div>
                     <div class="answer">
-                        <a href="#" class="active">
+                        <a>
                             Are my purchases protected if I pay by credit card ?
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                     </div>
-                    <div class="answer">
+                    <div class="answer-content">
                         <p>
-                            I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know painful.
+                            I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know painful. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quia veniam delectus quas sunt? Magnam iure libero eveniet fuga dolor, perferendis tempora? Exercitationem quisquam inventore alias enim quos, veritatis necessitatibus? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non corporis quidem modi quas aut possimus obcaecati ipsam reiciendis error deleniti maxime facilis corrupti eveniet, molestiae iste, debitis consequuntur quibusdam accusamus?
                         </p>
                     </div>
                     <div class="answer">
-                        <a href="#">
+                        <a>
                             What's chargeback protection ?
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                     </div>
+                    <div class="answer-content">
+                        <p>
+                            I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know painful. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quia veniam delectus quas sunt? Magnam iure libero eveniet fuga dolor, perferendis tempora? Exercitationem quisquam inventore alias enim quos, veritatis necessitatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum debitis commodi dolorum impedit inventore eum consequuntur nihil accusamus quisquam natus quo non velit, minima corrupti animi dolore distinctio! Tempora unde aut officiis eligendi aspernatur cumque maiores recusandae quae similique, sapiente fugit quos, labore rerum nisi nesciunt repellendus cum quis assumenda, fuga facere laborum. Illo voluptates voluptas consequatur in neque obcaecati adipisci praesentium nostrum! Possimus nam iure, maiores tempore magnam soluta impedit ipsum quod fuga corrupti consequuntur. Dolorum aut molestiae a cumque beatae, expedita nobis non ullam maiores vitae repellendus similique? Doloremque cum natus, voluptate magni adipisci quae quos earum animi.
+                        </p>
+                    </div>
                     <div class="answer">
-                        <a href="#">
+                        <a>
                             Are there any downsides to using a credit card ?
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                     </div>
+                    <div class="answer-content">
+                        <p>
+                            I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know painful. 
+                        </p>
+                    </div>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
@@ -378,8 +403,17 @@
                         </h5>
                         <form action="">
                             <input type="text" placeholder="Enter Email To Get Notification">
-                            <input type="submit" value="">
+                            <input type="submit" value="" id="subscribeBtn">
                         </form>
+                        <div id="subscribeModal" class="modal">
+                            <div class="modal-content">
+                                <section>
+                                    <p>
+                                        You successfully subscribed for our notifications!
+                                    </p>
+                                </section>
+                            </div>
+                        </div>
                     </div>
                     <div class="instagram-posts">
                         <h5>
@@ -395,5 +429,8 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.js"></script>
+
 </body>
 </html>

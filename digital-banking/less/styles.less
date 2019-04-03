@@ -4,6 +4,7 @@
 @blue: #0b4bec;
 @blue-dark: #071d68;
 @bg-color: #f3f2f2;
+@green: #28a745;
 @gray: #808080;
 @gray-dark: #333333;
 @linear-gradient: linear-gradient(-18deg, @blue-dark 0%, @blue 100%);
@@ -85,7 +86,7 @@ body {
     background: @linear-gradient;
     position: fixed;
     width: 100%;
-    z-index: 10000;
+    z-index: 5;
 }
 
 .header-top {
@@ -184,6 +185,28 @@ body {
         }
     }
 }
+.btn {
+    width: 100wh;
+    height: 100vh;
+    position: absolute;
+    #btnTop{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        background-image: @linear-gradient;
+        border-radius: 12px;
+        visibility: hidden;
+        a {
+            padding: 16px 20px;      
+            display: block;     
+            color: @white;
+        }
+    }
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+}
 .get-card {
     background-color: @bg-color;
     padding: 160px 0 200px;
@@ -233,7 +256,7 @@ body {
     .container-video {
         background-image: url(../img/video_layout.png);
         background-position: left top;
-        background-size: 50% 100%;
+        background-size: calc(50% - 15px) 100%;
         background-repeat: no-repeat;
         height: 1160px;
     }
@@ -418,7 +441,6 @@ body {
         align-items: flex-start;
         .flex();
         justify-content: space-between;
-        height: 400px;
         a {
             align-items: center;
             background-color: @white;
@@ -432,7 +454,6 @@ body {
             height: 50px;
             text-decoration: none;
             margin: 0;
-            width: 100%;
             &:hover {
                 background-color: @blue;
                 color: @white;
@@ -448,7 +469,9 @@ body {
                 a{             
                     position: relative;
                     justify-content: center;
+                    margin-bottom: 10px;
                     &:hover {
+                        cursor: pointer;
                         &::before {
                             content: '';
                             border-style: solid;
@@ -476,32 +499,42 @@ body {
                     }
                 }
             }
+                
         }
         .answers-wrap {
             max-width: 800px;
             .flex();
             flex-direction: column;
             justify-content: space-between;
-            height: 100%;
+            width: 100%;
             .answer {
-                p { 
-                    align-items: center;
-                    .flex();
-                    background-color: @white;
-                    padding: 0 30px;
-                    text-align: left;
-                    height: 120px;
-                    line-height: @text-lineheight;
+                margin-bottom: 10px;
+                a:hover {
+                    cursor: pointer;
                 }
-                .active {
-                    color: @blue;
-                    &:hover {
-                        background-color: @blue;
-                        color: @white;
+                &.active {
+                    a {
+                        color: @blue;
+                        &:hover {
+                            color: @white;
+                        }
+                        i {
+                            transform: rotate(180deg);
+                        }
                     }
-                    i {
-                        transform: rotate(180deg);
-                    }
+                }
+            }
+            .answer-content {
+                padding: 0 30.5px;
+                max-height: 0;
+                overflow: hidden;
+                transition: .3s linear;
+                &.active {
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    background-color: @white;
+                    margin-bottom: 10px;
+                    padding: 20px 30px;
+                    transition: max-height .3s ease-in-out; 
                 }
             }
         }
@@ -647,6 +680,27 @@ footer {
                             &:hover {
                                 cursor: pointer;                                
                             }
+                        }
+                    }
+                }
+                .modal {
+                    display: none;
+                    left: 0;
+                    top: 0;
+                    position: fixed;
+                    overflow: auto;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 5;
+                    .modal-content {
+                        background-color: rgba(40, 167, 69, .9);
+                        position: absolute;
+                        top: 20%;
+                        right: 0;
+                        padding: 20px;
+                        p {
+                            color: @white;
+                            font-size: 14px;
                         }
                     }
                 }
