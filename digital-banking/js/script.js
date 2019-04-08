@@ -1,6 +1,10 @@
+var answer = document.getElementsByClassName("answer");
 var modalSub = document.getElementById("subscribeModal");
 var btnSub = document.getElementById("subscribeBtn");
-var answer = document.getElementsByClassName("answer");
+
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
 
 for (i = 0; i < answer.length; i++) {
     answer[i].onclick = function() {
@@ -21,10 +25,12 @@ for (i = 0; i < answer.length; i++) {
 }
 
 btnSub.onclick = function() {
+    event.preventDefault();
+    modalSub.style.visibility = "visible";
     modalSub.style.display = "block";
 }
 
 modalSubNone = function() {
-    modalSub.style.display = "none";
+    modalSub.style.visibility = "hidden";
 }
 var timeId = setTimeout(modalSubNone, 10000);

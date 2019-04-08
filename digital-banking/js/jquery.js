@@ -1,7 +1,16 @@
-var answer = $('.answer');
+$(document).ready(function(){
 
-for(i = 0; i < answer.length; i++) {
-  answer[i].addEventListener('onclick', function(){
-    this.classList.add('active');
-  })
-}
+    $(window).scroll(function() {
+		if($(this).scrollTop() > 400) {
+			$('.btnTop').fadeIn();
+		} else {
+			$('.btnTop').fadeOut();
+		}
+	});
+
+    $('.btnTop').click(function(){
+        $('html, body').animate({scrollTop : 0},400);
+        return false;
+    });
+
+});

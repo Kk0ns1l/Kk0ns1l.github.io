@@ -26,7 +26,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="header-fixed">
             <div class="header-top container">
                 <a href="#"><img src="img/logo.png" alt="Digital Banking Logo">
@@ -60,13 +60,9 @@
                 </div>
             </div>
         </div>
-        <div class="btn">
-            <div id="btnTop">
-                <a href="#">
-                    <i class="fa fa-angle-up" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
+        <a href="#" class="btnTop">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </a>
     </header>
     <section class="get-card">
         <div class="container">
@@ -98,11 +94,31 @@
         </div>
     </section>
     <section class="video">
-        <div class="container-video">
-            <div class="overlay"></div>
-        </div>
-        <div class="container-small">
-            <h4>it's </h4>
+        <div class="container">
+            <div class="video-container">
+                <a id="playVideo" class="video-play-button">
+                    <span></span>
+                </a>
+                <video height="1170">
+                    <source src="video/banks.mp4" type="video/mp4">
+                    Your browser doesn't support this format!            
+                </video>
+            </div>
+            <div class="container-small">
+                <h4>
+                    it's easy to use
+                </h4>
+                <h3>
+                    benefits credit card
+                </h3>
+                <div class="benefits-container">
+                    <h5>top security</h5>
+                    <h5>money saving</h5>
+                    <h5>protection</h5>
+                    <h5>organization</h5>
+                    <h5>credit history</h5>
+                </div>
+            </div>
         </div>
     </section>
     <section class="services container">
@@ -431,6 +447,5 @@
     </footer>
     <script src="js/script.js"></script>
     <script src="js/jquery.js"></script>
-
 </body>
 </html>
