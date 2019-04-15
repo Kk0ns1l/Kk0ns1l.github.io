@@ -1,3 +1,8 @@
+document.onload = function() {
+    var safe = getElementsByClassName('safe');
+    safe.style.display = 'none';
+}
+
 var answer = document.getElementsByClassName("answer");
 var modalSub = document.getElementById("subscribeModal");
 var btnSub = document.getElementById("subscribeBtn");
