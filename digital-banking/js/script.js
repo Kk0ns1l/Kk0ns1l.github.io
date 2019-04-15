@@ -1,5 +1,5 @@
-document.onload = function() {
-    var safe = getElementsByClassName('safe');
+window.onload = function() {
+    var safe = getElementById('safe');
     safe.style.display = 'none';
 }
 
