@@ -1,6 +1,6 @@
 window.onload = function() {
-    var safe = getElementById('safe');
-    safe.style.display = 'none';
+    var safe = document.querySelector('#safe');
+    safe.classList.add('preload-finished');
 }
 
 var answer = document.getElementsByClassName("answer");

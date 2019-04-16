@@ -81,7 +81,7 @@ body {
 }
 
 #safe {
-    position: relative;
+    position: fixed;
     background-image: @linear-gradient;
     display: flex;
     flex-direction: column;
@@ -89,6 +89,7 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    transition: opacity .5s ease;
     width: 100%;
     z-index: 100;
 }
@@ -232,6 +233,10 @@ body {
     width: 170px;
     height: 20px;
     z-index: -2;
+}
+.preload-finished {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .header-fixed {
