@@ -372,7 +372,6 @@ body {
         flex-direction: column;
         height: 350px;
         width: 370px;
-        
         p {
             color: @gray;
             line-height: @text-lineheight;
@@ -380,13 +379,11 @@ body {
             max-width: 300px;
             margin: 0;
         }
-
         h5 {
             font-size: @h5-size;
             margin-bottom: 36px;
             margin-top: 26px;
         }
-
         &:nth-child(2) {
             background: @linear-gradient;
             height: 430px;
@@ -396,7 +393,6 @@ body {
         }
     }
 }
-
 .video {
     height: 1170px;
     position: relative;
@@ -545,23 +541,19 @@ body {
         margin-bottom: 70px;
         text-align: left;
     }
-    .slider {
+    .owl-stage {
         position: relative;
-        .slider-controle {
-            a {
-                position: absolute;
-                margin-top: -10px;
-                top: 50%;
-                &:first-child {
-                    left: -82px;
-                }
-                &:last-child {
-                    transform: rotate(180deg);
-                    right: -82px;
-                }
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            button {
+                background: none;
+                border: none;
+                outline: none;
             }
         }
     }
+
     .cards {
         align-items: center;
         .flex();

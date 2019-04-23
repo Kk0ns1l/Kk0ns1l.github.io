@@ -508,20 +508,17 @@ body {
   margin-bottom: 70px;
   text-align: left;
 }
-.services .slider {
+.services .owl-stage {
   position: relative;
 }
-.services .slider .slider-controle a {
+.services .owl-stage .owl-nav {
   position: absolute;
-  margin-top: -10px;
   top: 50%;
 }
-.services .slider .slider-controle a:first-child {
-  left: -82px;
-}
-.services .slider .slider-controle a:last-child {
-  transform: rotate(180deg);
-  right: -82px;
+.services .owl-stage .owl-nav button {
+  background: none;
+  border: none;
+  outline: none;
 }
 .services .cards {
   align-items: center;
